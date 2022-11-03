@@ -1,6 +1,6 @@
-package SITSchtest.com.samsung.MOD2.сц01112022;
+package SITSchtest.com.samsung.MOD2.cw01112022;
 
-import SITSchtest.com.samsung.MOD2.сц01112022.model.Person;
+import SITSchtest.com.samsung.MOD2.cw01112022.model.Person;
 
 public class MAin {
     public static void main(String[] args) {

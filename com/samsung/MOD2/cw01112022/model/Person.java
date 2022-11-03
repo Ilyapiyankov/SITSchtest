@@ -1,4 +1,4 @@
-package SITSchtest.com.samsung.MOD2.сц01112022.model;
+package SITSchtest.com.samsung.MOD2.cw01112022.model;
 
 public class Person {
 
