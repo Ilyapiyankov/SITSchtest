@@ -4,7 +4,10 @@ public abstract class User {
 
     String firstname, lastname;
 
-    Integer phoneNumber;
+    char[] phoneNumber;
+    public boolean hasNoPhoneNumber(){
+        return this.phoneNumber==null;
+    }
 
     public abstract void sayHello();
 }
