@@ -1,10 +1,13 @@
 package SITSchtest.com.samsung.MOD2.cw29112022.Model;
 
-public abstract class User {
+public abstract class User implements Printer{
 
-    String firstname, lastname;
+    protected String firstname, lastname;
 
-    Integer phoneNumber;
+    char[] phoneNumber;
+    public boolean hasNoPhoneNumber(){
+        return this.phoneNumber==null;
+    }
 
     public abstract void sayHello();
 }
