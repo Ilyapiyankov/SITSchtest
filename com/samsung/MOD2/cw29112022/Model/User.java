@@ -4,7 +4,7 @@ public abstract class User implements Printer{
 
     protected String firstname, lastname;
 
-    char[] phoneNumber;
+    String phoneNumber;
     public boolean hasNoPhoneNumber(){
         return this.phoneNumber==null;
     }

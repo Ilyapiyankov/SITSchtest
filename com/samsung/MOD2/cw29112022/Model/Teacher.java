@@ -9,31 +9,31 @@ public class Teacher extends User{
     public Teacher(String f, String l,String t, List<String> subjects){
         this.firstname=f;
         this.lastname=l;
-        this.phoneNumber=t.toCharArray();
+        this.phoneNumber=t;
         this.subjects=subjects;
     }
     public Teacher(String f, String l, char[] t, List<String> subjects){
         this.firstname=f;
         this.lastname=l;
-        this.phoneNumber=t;
+        this.phoneNumber=t.toString();
         this.subjects=subjects;
     }
     public Teacher(String f, String l, Integer t, List<String> subjects){
         this.firstname=f;
         this.lastname=l;
-        this.phoneNumber=t.toString().toCharArray();
+        this.phoneNumber=t.toString();
         this.subjects=subjects;
     }
     public Teacher(String f, String l,String t){
         this.firstname=f;
         this.lastname=l;
-        this.phoneNumber=t.toCharArray();
+        this.phoneNumber=t;
         this.subjects=null;
     }
     public Teacher(Teacher teacher){
         this.firstname = teacher.getFirstName();
         this.lastname = teacher.getLastName();
-        this.phoneNumber = teacher.getPhoneNumber().toCharArray();
+        this.phoneNumber = teacher.getPhoneNumber();
         this.subjects = teacher.getSubjects();
     }
 
@@ -46,7 +46,7 @@ public class Teacher extends User{
     }
 
     public String getPhoneNumber(){
-        return hasNoPhoneNumber() ? "No phone number" : phoneNumber.toString();
+        return hasNoPhoneNumber() ? "No phone number" : phoneNumber;
     }
 
     public List<String> getSubjects(){return subjects;}
@@ -71,7 +71,7 @@ public class Teacher extends User{
         System.out.printf(
                 "Hello. I'm teacher, my name is %s and lastname is %s. My phone number is %s\n",
                 firstname,lastname,
-                hasNoPhoneNumber() ? "none" : phoneNumber.toString()
+                hasNoPhoneNumber() ? "none" : phoneNumber
         );
         if (hasNoSubs()){
             System.out.println("I have no subjects to teach");
@@ -94,9 +94,9 @@ public class Teacher extends User{
                 firstname,
                 lastname,
                 hasNoPhoneNumber() ?
-                        "but i have no phone."
+                        "has no phone."
                         :
-                        String.format("my number is %s.", phoneNumber.toString())
+                        String.format("number is %s.", phoneNumber)
 
         );
 
@@ -108,6 +108,6 @@ public class Teacher extends User{
         for (var i: subjects) {
             str+=i+", ";
         }
-        System.out.println("My subjects: "+ str.substring(0,str.length()-2)+".");
+        System.out.println(ans+"\nMy subjects: "+ str.substring(0,str.length()-2)+".");
     }
 }

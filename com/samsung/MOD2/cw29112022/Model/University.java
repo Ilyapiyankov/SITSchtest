@@ -51,4 +51,17 @@ public class University implements Printer {
         System.out.println("-".repeat("Попробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)".length()));
 
     }
+
+    public void addStudents(Student... students){
+        for (var i : students) {
+            if (!this.students.contains(i)) this.students.add(i);
+        }
+    }
+
+    public void addTeachers(Teacher... teachers){
+        for (var i : teachers) {
+            if (!this.teachers.contains(i)) this.teachers.add(i);
+        }
+    }
+
 }

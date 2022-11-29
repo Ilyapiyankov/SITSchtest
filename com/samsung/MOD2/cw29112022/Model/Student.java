@@ -7,19 +7,19 @@ public class Student extends User{
     public Student(String f, String l, String group, String t){
         this.firstname=f;
         this.lastname=l;
-        this.phoneNumber=t.toCharArray();
+        this.phoneNumber=t;
         this.group = group;
     }
     public Student(String f, String l, String group, Integer t){
         this.firstname=f;
         this.lastname=l;
-        this.phoneNumber=t.toString().toCharArray();
+        this.phoneNumber=t.toString();
         this.group = group;
     }
     public Student(String f, String l, String group, char[] t){
         this.firstname=f;
         this.lastname=l;
-        this.phoneNumber=t;
+        this.phoneNumber=t.toString();
         this.group = group;
     }
     public Student(String f, String l,String group){
@@ -31,7 +31,7 @@ public class Student extends User{
     public Student(Student student){
         this.firstname = student.getFirstName();
         this.lastname = student.getLastName();
-        this.phoneNumber = student.getPhoneNumber().toCharArray();
+        this.phoneNumber = student.getPhoneNumber();
         this.group = student.getGroup();
     }
 
@@ -41,7 +41,7 @@ public class Student extends User{
                 "name : %s, lastname: %s, phone's number: %s",
                 this.firstname,
                 this.lastname,
-                this.phoneNumber==null ? "none" : phoneNumber.toString()
+                this.phoneNumber==null ? "none" : phoneNumber
                 );
     }
 
@@ -58,7 +58,7 @@ public class Student extends User{
     }
 
     public String getPhoneNumber(){
-        return hasNoPhoneNumber() ? "No phone number" : phoneNumber.toString();
+        return hasNoPhoneNumber() ? "No phone number" : phoneNumber;
     }
 
     /*public boolean hasNoPhoneNumber(){
@@ -79,7 +79,7 @@ public class Student extends User{
             System.out.println(" and I have no phone number.");
         }
         else {
-            System.out.println(" my number is "+phoneNumber.toString());
+            System.out.println(" my number is "+phoneNumber);
         }
     }
 
@@ -91,9 +91,9 @@ public class Student extends User{
                 lastname,
                 group,
                 hasNoPhoneNumber() ?
-                        "but he has no phone.\n\n"
+                        "has no phone.\n\n"
                         :
-                        String.format("his number is %s\n\n", phoneNumber.toString())
+                        String.format("his number is %s\n\n", phoneNumber)
                 );
     }
 }
