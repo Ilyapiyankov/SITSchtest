@@ -12,14 +12,14 @@ public class University implements Printer {
     public University(List<Teacher> teachers, List<Student> students, String address) {
         this.teachers = new ArrayList<>();
 
-        for (var teacher:teachers) {
-            if ( !this.teachers.contains(teacher) ) this.teachers.add(teacher);
+        for (var teacher : teachers) {
+            if (!this.teachers.contains(teacher)) this.teachers.add(teacher);
         }
 
         this.students = new ArrayList<>();
 
-        for (var student:students) {
-            if ( !this.students.contains(student) ) this.students.add(student);
+        for (var student : students) {
+            if (!this.students.contains(student)) this.students.add(student);
         }
 
         this.address = address;
