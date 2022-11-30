@@ -47,8 +47,8 @@ public class University implements Printer {
 
             System.out.println("Teachers:");
 
-            for (var i : teachers) {
-                i.printInfoToConsoleSuperKpacuBo();
+            for (var teacher : teachers) {
+                teacher.printInfoToConsoleSuperKpacuBo();
             }
 
         } else System.out.println("No teachers");
@@ -57,8 +57,8 @@ public class University implements Printer {
 
             System.out.println("Students:");
 
-            for (var i : students) {
-                i.printInfoToConsoleSuperKpacuBo();
+            for (var student : students) {
+                student.printInfoToConsoleSuperKpacuBo();
             }
 
         } else System.out.println("No students");

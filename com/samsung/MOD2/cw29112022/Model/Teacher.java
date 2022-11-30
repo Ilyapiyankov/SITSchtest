@@ -119,7 +119,7 @@ public class Teacher extends User {
 
         ans = String.format(
 
-                "Name:%s, lastname:%s, %s",
+                "Name: %s, lastname: %s, %s",
                 firstname,
                 lastname,
                 hasNoPhoneNumber() ?
@@ -131,7 +131,7 @@ public class Teacher extends User {
 
         if (hasNoSubs()) {
 
-            System.out.println("I have no subjects to teach");
+            System.out.println(" has no subjects to teach");
 
             return;
 
@@ -145,6 +145,6 @@ public class Teacher extends User {
 
         }
 
-        System.out.println(ans + "\nMy subjects: " + str.substring(0, str.length() - 2) + ".");
+        System.out.println(ans + "\nsubjects: { " + str.substring(0, str.length() - 2) + " } .\n");
     }
 }
