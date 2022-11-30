@@ -14,7 +14,6 @@ public class DemoService {
 
     public void demo() {
 
-        List<String> subjects = new LinkedList<String>();
         List<Teacher> teachers = new LinkedList<Teacher>();
 
         //Teacher[] teachers = new Teacher[3];
