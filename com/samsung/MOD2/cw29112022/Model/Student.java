@@ -1,34 +1,39 @@
 package SITSchtest.com.samsung.MOD2.cw29112022.Model;
 
-public class Student extends User{
+public class Student extends User {
 
+    //private String phoneNumber;
     private String group;
 
-    public Student(String f, String l, String group, String t){
-        this.firstname=f;
-        this.lastname=l;
-        this.phoneNumber=t;
+    public Student(String name, String lastname, String group, String phoneNumber) {
+        this.firstname = name;
+        this.lastname = lastname;
+        this.phoneNumber = phoneNumber;
         this.group = group;
     }
-    public Student(String f, String l, String group, Integer t){
-        this.firstname=f;
-        this.lastname=l;
-        this.phoneNumber=t.toString();
+
+    public Student(String name, String lastname, String group, Integer phoneNumber) {
+        this.firstname = name;
+        this.lastname = lastname;
+        this.phoneNumber = phoneNumber.toString();
         this.group = group;
     }
-    public Student(String f, String l, String group, char[] t){
-        this.firstname=f;
-        this.lastname=l;
-        this.phoneNumber=t.toString();
+
+    public Student(String name, String lastname, String group, char[] phoneNumber) {
+        this.firstname = name;
+        this.lastname = lastname;
+        this.phoneNumber = phoneNumber.toString();
         this.group = group;
     }
-    public Student(String f, String l,String group){
-        this.firstname=f;
-        this.lastname=l;
+
+    public Student(String name, String lastname, String group) {
+        this.firstname = name;
+        this.lastname = lastname;
+        this.group = group;
         this.phoneNumber=null;
-        this.group=group;
     }
-    public Student(Student student){
+
+    public Student(Student student) {
         this.firstname = student.getFirstName();
         this.lastname = student.getLastName();
         this.phoneNumber = student.getPhoneNumber();
@@ -37,27 +42,29 @@ public class Student extends User{
 
     @Override
     public String toString() {
+
         return String.format(
                 "name : %s, lastname: %s, phone's number: %s",
                 this.firstname,
                 this.lastname,
-                this.phoneNumber==null ? "none" : phoneNumber
-                );
+                this.phoneNumber == null ? "none" : phoneNumber
+        );
+
     }
 
     public String getGroup() {
         return group;
     }
 
-    public String getFirstName(){
+    public String getFirstName() {
         return firstname;
     }
 
-    public String getLastName(){
+    public String getLastName() {
         return lastname;
     }
 
-    public String getPhoneNumber(){
+    public String getPhoneNumber() {
         return hasNoPhoneNumber() ? "No phone number" : phoneNumber;
     }
 
@@ -69,18 +76,19 @@ public class Student extends User{
     public void sayHello() {
         System.out.print(
                 "Hi! It's student with firstname: "
-                        +firstname
+                        + firstname
                         + ", lastname: "
                         + lastname
-                        +", my group is "
-                        +group
+                        + ", my group is "
+                        + group
         );
-        if (hasNoPhoneNumber()){
+
+        if (hasNoPhoneNumber()) {
             System.out.println(" and I have no phone number.");
+        } else {
+            System.out.println(" my number is " + phoneNumber);
         }
-        else {
-            System.out.println(" my number is "+phoneNumber);
-        }
+
     }
 
     @Override
@@ -94,6 +102,6 @@ public class Student extends User{
                         "has no phone.\n\n"
                         :
                         String.format("his number is %s\n\n", phoneNumber)
-                );
+        );
     }
 }
